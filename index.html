@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="assets/CSS/style-index.css" rel="stylesheet"/>
+    <title>Seu estoque</title>
+</head>
+<body>
+    <section id="section-conteudo">
+        <div class="menunav">
+            <div class="chave-menunav">ESTOQUE</div>
+            <a href=""><div class="opcoes-menunav">Todos os Produtos</div></a>
+            <a href=""><div class="opcoes-menunav">Para Vencer</div></a>
+            <a href=""><div class="opcoes-menunav">Adicionar Produto</div></a>                
+            <a href=""><div class="opcoes-menunav">Excluir Produto</div></a>
+            
+        </div>
+        <div class="conteudo">
+            <div class="infos">
+                <div class="titulo">Para Vencer Hoje</div>
+                <div class="topo-conteudo">  
+                    <div class="data-hoje">06/07/2021</div>
+                    
+                </div>
+                <div class="pesquisa">
+                    <div class="barra-pesquisa">
+                        <input type="search" place-hold="Digite Aqui" />
+                        <input type="button" value="Pesquisar"/>
+                    </div>
+
+                </div>
+                <div class="tabela-espaco">
+                    <div id="tabela">              
+                        <table border="1">  
+                            <thead>
+                                <tr>
+                                    <td>id</td>
+                                    <td>Nome Produto</td>
+                                    <td>Quantidade</td>
+                                    <td>Validade</td>
+                                    <td>Valor Unit</td>
+                                    <td><input type="checkbox"/></td>
+                                </tr>            
+                            </thead> 
+                            <div class="tbody">
+                                <tbody v-for="info in produtos">
+                                    <tr>
+                                        <td v-text="info.id"></td>
+                                        <td v-text ="info.nomeproduto"></td>
+                                        <td v-text ="info.quantidade"></td>
+                                        <td v-text="info.validade"></td>
+                                        <td v-text="info.valorunit"></td>
+                                        <td><input type="checkbox"/></td>
+                                    </tr>
+                                </tbody>     
+                            </div>               
+                                          
+                        </table>                      
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="botoes">
+                <input type="button" value="Criar Promo"/>
+                <input type="button" value="Já foi vendido"/>
+                <input type="button" value="Criar Alerta"/>
+            </div>
+        </div>
+        
+        
+    </section>
+    <section id="menuprincipal">
+        <a href=""><div class="icone"><img src="assets/images/perfil3.png"/></div></a>
+        <a href=""><div class="icone"><img src="assets/images/carrinho1.png"/></div></a>
+        <a href=""><div class="icone"><img src="assets/images/estoque.png"/></div></a>
+    </section>
+    
+    <script src="assets/js/index-script.js"></script>
+</body>
+</html>

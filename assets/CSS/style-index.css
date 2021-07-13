@@ -1,0 +1,243 @@
+body {
+    margin:0px;
+    padding:0px;
+}
+
+#section-conteudo {
+    display:flex;
+    flex-direction: row;
+    width:100vw;
+    height:100vh;
+}
+
+#section-conteudo .menunav {
+    position:relative;
+    left:0vw;
+    top:0vh;
+    width:220px;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: top;
+    border-right: 2px solid rgb(202, 202, 202)
+    
+}
+#section-conteudo .menunav .chave-menunav {
+    height:60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    border-bottom:2px solid rgb(202, 202, 202);
+
+}
+#section-conteudo .menunav .opcoes-menunav {
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:17px;
+    
+}
+
+#section-conteudo .menunav .opcoes-menunav:last-child {
+    border-bottom:2px solid rgb(202, 202, 202);
+}
+
+
+#section-conteudo .menunav a{
+    text-decoration:none;
+    color:inherit;
+}
+
+#section-conteudo .menunav .opcoes-menunav:hover{
+    font-size:20px;
+    background-color:rgb(157, 157, 252);
+}
+
+
+
+
+#menuprincipal {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items:center;
+    position:absolute;
+    left:220px;
+    top:0vh;
+    width: calc(100vw - 222px);
+    height:60px;
+    border-bottom:2px solid rgb(202, 202, 202);
+}
+
+#menuprincipal .icone {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:50px;
+    height:50px;
+    margin-right:15px;
+    border-radius:25px;
+    
+}
+
+#menuprincipal img:hover {
+    background-color:rgb(157, 157, 252);
+    
+    
+}
+
+#menuprincipal .icone:nth-child(1) {
+    
+    margin-right :20px;
+}
+
+#menuprincipal img {
+    width:50px;
+    height:50px;
+}
+
+
+
+
+#section-conteudo .conteudo {
+    display:flex;
+    flex-direction:row;
+    position: relative;
+    right:auto;
+    top:62px;
+    width:calc(100vw - 222px);
+    height:calc(100vh - 62px);
+    
+}
+
+#section-conteudo .conteudo .infos {
+    display:flex;
+    flex-direction: column;
+
+
+}
+
+#section-conteudo .conteudo .botoes {
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    left:calc(100vw - 1265px);
+    width:200px;
+    height:calc(100vh - 62px);
+    border-left: 2px solid rgb(202, 202, 202);
+}
+#section-conteudo .conteudo .botoes input {
+    text-justify: center;
+    text-align: center;
+    height:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:500;
+    font-size:17px;
+    background-color:white;
+
+
+}
+
+#section-conteudo .conteudo .infos {
+    width:calc(100vw - 424px);
+    height: calc(100vh - 62px);
+}
+
+#section-conteudo .conteudo .infos .topo-conteudo .data-hoje {
+    display:flex;
+    font-size:17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-conteudo .conteudo .infos .topo-conteudo {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    height:30px;
+
+}
+
+
+
+#section-conteudo .conteudo .infos .titulo {
+    display:flex;
+    font-size:35px;
+    margin-top:15px;
+    margin-bottom:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#section-conteudo .conteudo .infos .pesquisa .barra-pesquisa {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-conteudo .conteudo .infos .pesquisa .barra-pesquisa input[type="search"] {
+    height:30px;
+    width:250px;
+    border-radius:5px;
+}
+#section-conteudo .conteudo .infos .pesquisa .barra-pesquisa input[type="button"] {
+    height:30px;
+    border-radius:5px;
+}
+
+#section-conteudo .conteudo .infos .tabela-espaco {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: calc( 100vh - 187px);
+}
+
+#section-conteudo .conteudo .infos .tabela-espaco #tabela td {
+    text-align:center;
+    text-justify: center;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* codigo estranho*/
+
+#section-conteudo .conteudo .infos .tabela-espaco {
+    height: 10em;
+}
+#section-conteudo .conteudo .infos .tabela-espaco #tabela {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+#section-conteudo .conteudo .infos .tabela-espaco #tabela thead {
+    /* head takes the height it requires, 
+    and it's not scaled when table is resized */
+    flex: 0 0 auto;
+    width: calc(100% - 0.9em);
+}
+#section-conteudo .conteudo .infos .tabela-espaco #tabela tbody {
+    /* body takes all the remaining available space */
+    flex: 2 3 auto;
+    display: block;
+    overflow-y: scroll;
+}
+table tbody tr {
+    width: 100%;
+}
+table thead, table tbody tr {
+    display: table;
+    table-layout: fixed;
+}
